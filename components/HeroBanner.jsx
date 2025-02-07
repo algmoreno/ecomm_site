@@ -1,17 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
 
-const HeroBanner = () => {
+const HeroBanner = ({ heroBanner }) => {
   return (
     <div className="hero-banner-container">
       <div>
         <p className="beats-solo">
-          small text
+          {heroBanner.smallText}
         </p>
         <h3>
           mid
         </h3>
         <img src="" alt="headphones" className="hero-banner-image" />
+
         <div>
           <Link href="/product/ID">
             <button type='button'>button text</button>
@@ -25,6 +26,7 @@ const HeroBanner = () => {
             </p>
           </div>
         </div>
+
       </div>
     </div>
   )
