@@ -3,7 +3,6 @@ import { client } from '../lib/client'
 import { Product, FooterBanner, HeroBanner } from '../components'
 
 const Home = ({ products, bannerData }) => {
-  console.log(bannerData)
 
   return (
     <>
@@ -18,8 +17,8 @@ const Home = ({ products, bannerData }) => {
         </p>
       </div>
 
-      <div>
-        {products?.map((product) => product.name)}
+      <div className="products-container">
+        {products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
 
       <FooterBanner />
