@@ -13,11 +13,11 @@ export const StateContext = ({ children }) => {
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems.find((item) => item._id === product._id)
     
-    if(checkProductInCart){
-      // if product is already in cart increase price and quantity
-      setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity)
-      setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity)
-
+    // increase price and quantity
+    setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity)
+    setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
+    
+    if(checkProductInCart){          
       // updating the cartProducts object array with new cartProducts
       const updatedCartItems = cartItems.map((cartProduct) => {
         if (cartProduct._id === product._id) return {
@@ -33,23 +33,23 @@ export const StateContext = ({ children }) => {
       product.quantity = quantity;
       setCartItems([...cartItems, { ...product }])
     }
-    toast.success(`${quantity} ${product.name} added to the cart.`)
+    toast.success(`${qty} ${product.name} added to the cart.`)
   }
 
   const incQty = () => {
-    setQty((prevQty) => prevQty + 1)
+    setQty((prevQty) => prevQty + 1);
   }
 
   const decQty = () => {
     setQty((prevQty) => {
-      if (prevQty - 1 < 1) return 1;
-      
-      return prevQty - 1
-    })
+      if(prevQty - 1 < 1) return 1;
+     
+      return prevQty - 1;
+    });
   }
 
   return (
-    <Context.Provider value={{ showCart, cartItems, totalPrice, totalQuantities, 
+    <Context.Provider value={{ showCart, cartItems, setCartItems, totalPrice, totalQuantities, 
                               qty, incQty, decQty, onAdd, setShowCart }}>
       {children}
     </Context.Provider>
