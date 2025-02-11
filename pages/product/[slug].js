@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import { client, urlFor } from '../../lib/client';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineStar, AiFillStar } from 'react-icons/ai'
 import { Product } from '../../components';
+import { useStateContext } from '../../context/StateContext';
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
 
   const [index, setIndex] = useState(0)
+  const { deqQty, incQty, qty } = useStateContext();
 
   return (
     <div>
