@@ -23,12 +23,12 @@ const Cart = () => {
       body: JSON.stringify(cartItems),
     });
 
-    if (response.statusCode === 500) return;
-
-    const data = await response.json();
-
+    if(response.statusCode === 500) return;
+    
+    const session = await response.json();
+    console.log(session)
     toast.loading('Redirecting...');
-    stripe.redirectToCheckout({ sessionId: data.id })
+    window.location.href = session.url;
   }
 
   return (
