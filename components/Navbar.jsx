@@ -12,6 +12,24 @@ const Navbar = () => {
       <p className="logo">
         <Link href="/">97 Spec.</Link>
       </p>
+      <div className="navbar-overlay">
+        Overlay button
+      </div>
+      <div className="navbar-options">
+        <p>
+          <Link href='/new'>New</Link>
+        </p>
+        <p>
+          <Link href='/mens'>Mens</Link>
+        </p>
+        <p>
+          <Link href='/womens'>Womens</Link>
+        </p>
+        <p>
+          <Link href='/womens'>Deals</Link>
+        </p>  
+      </div>
+
       <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
         <AiOutlineShopping />
         <span className="cart-item-qty">{totalQuantities}</span>
