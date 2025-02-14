@@ -3,17 +3,18 @@ import Link from 'next/link';
 import { AiOutlineShopping } from 'react-icons/ai'
 import { Cart } from './'
 import { useStateContext } from '../context/StateContext'
+import { CiMenuBurger } from "react-icons/ci";
 
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
 
   return (
-    <div className="navbar-container">
-      <p className="logo">
+    <div className="navbar-container font-secondary">
+      <p className="logo font-primary">
         <Link href="/">97 Spec.</Link>
       </p>
       <div className="navbar-overlay">
-        Overlay button
+        <CiMenuBurger className="navbar-menu-icon" />
       </div>
       <div className="navbar-options">
         <p>
