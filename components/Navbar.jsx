@@ -20,12 +20,6 @@ const Navbar = () => {
           <Link href='/new'>New</Link>
         </p>
         <p>
-          <Link href='/mens'>Mens</Link>
-        </p>
-        <p>
-          <Link href='/womens'>Womens</Link>
-        </p>
-        <p>
           <Link href='/womens'>Deals</Link>
         </p>  
       </div>
