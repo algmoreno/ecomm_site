@@ -670,10 +670,9 @@ padding: 6px;
 }
 .success, .cancel{
   width: 1000px;
-margin: auto;
-margin-top: 160px;
-  background-color: #dcdcdc;
-  padding: 50px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 70px;
   border-radius: 15px;
   display: flex;
   justify-content: center;

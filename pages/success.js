@@ -14,7 +14,7 @@ const Success = () => {
   }, [])
   
   return (
-    <div className="success-wrapper">
+    <div className="success-wrapper font-tertiary">
       <div className="success">
         <p className="icon">
           <BsBagCheckFill />
@@ -28,7 +28,7 @@ const Success = () => {
           <a email="email" href="mailto:order@example.com">order@example.com</a>
         </p>
         <Link href="/">
-          <button type="button" width="300px" className="btn">
+          <button type="button" width="300px" className="btn font-tertiary">
             Continue Shopping 
           </button>
         </Link>
