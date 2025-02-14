@@ -17,7 +17,7 @@ const ProductDetails = ({ product, products }) => {
   }
 
   return (
-    <div className="product-detail-main">
+    <div className="product-detail-main font-tertiary">
       <div className="product-detail-container">
         <div className="image-container-main">
           <div className="product-detail-image">
@@ -59,10 +59,10 @@ const ProductDetails = ({ product, products }) => {
               </p>
             </div>
             <div className="buttons">
-              <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>
+              <button type="button" className="add-to-cart font-tertiary" onClick={() => onAdd(product, qty)}>
                 Add to Cart
               </button>
-              <button type="button" className="buy-now" onClick={handleBuyNow}>
+              <button type="button" className="buy-now font-tertiary" onClick={handleBuyNow}>
                 Buy Now
               </button>
             </div>

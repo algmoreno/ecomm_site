@@ -47,7 +47,7 @@ a {
   background-image: url("../public/assets/bg_10.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 950px;
+  height: 650px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -160,7 +160,7 @@ span.text-red {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  padding: 120px 0px 50px 0px;
+  padding: 0px 0px 50px 0px;
   width: 100%;
 }
 .product-card{
@@ -223,7 +223,7 @@ span.text-red {
   margin-top: 4px;
 }
 .hero-banner-container h1{
-  color: rgb(39, 64, 92);
+  color: rgb(148, 62, 62);
   font-size: 10em;
   margin-left: -20px;
   text-transform: uppercase;
@@ -471,13 +471,13 @@ padding: 30px 65px;
   width: 100%;
   max-width: 400px;
   padding: 10px 12px;
-  border-radius: 15px;
+  border-radius: 5px;
   border: none;
   font-size: 20px;
   margin-top: 10px;
   margin-top: 40px;
   text-transform: uppercase;
-  background-color: #f02d34;
+  background-color: #000000;
   color: #fff;
   cursor: pointer;
     transform: scale(1, 1);
@@ -539,7 +539,7 @@ padding: 30px 65px;
   background-color:#f02d34;
 }
 .reviews{
-  color: #f02d34;
+  color: #620000;
   margin-top: 10px;
   display: flex;
   gap: 5px;
@@ -567,7 +567,7 @@ padding: 30px 65px;
   font-weight: 700 ;
   font-size: 26px;
   margin-top: 30px;
-  color:#f02d34;
+  color:#000000;
 }
 .price .old-price, .product-price .old-price, .price .old-price{
   color: gray;
@@ -586,12 +586,12 @@ padding: 30px 65px;
 
 .buttons .add-to-cart{
   padding: 10px 20px;
-  border: 1px solid #f02d34 ;
+  border: 1px solid #000000 ;
   margin-top: 40px;
   font-size: 18px;
   font-weight: 500;
   background-color: white;
-  color: #f02d34;
+  color: #000000;
   cursor: pointer;
   width: 200px;
    transform: scale(1, 1);
@@ -603,7 +603,7 @@ padding: 30px 65px;
 .buttons .buy-now{
   width: 200px;
   padding: 10px 20px;
-  background-color: #f02d34;
+  background-color: #000000;
   color: white;
   border: none;
   margin-top: 40px;
@@ -627,14 +627,15 @@ padding: 6px;
 }
 .quantity-desc .minus{
   border-right: 1px solid gray;
-  color: #f02d34;
+  color: #ffffff;
 }
 .quantity-desc .num{
   border-right: 1px solid gray;
   font-size: 20px;
 }
+
 .quantity-desc .plus{
-  color: rgb(49, 168, 49);
+  color: rgb(255, 255, 255);
 }
 
 .maylike-products-wrapper{
@@ -709,9 +710,6 @@ margin-top: 160px;
 .product-max-qty{
   margin-top: 10px;
 }
-
-
-
 
 @media screen and (max-width:800px) {
   .hero-banner-container{

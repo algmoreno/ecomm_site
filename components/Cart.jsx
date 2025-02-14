@@ -32,20 +32,20 @@ const Cart = () => {
   }
 
   return (
-    <div className="cart-wrapper" ref={cartRef}>
+    <div className="cart-wrapper font-tertiary" ref={cartRef}>
       <div className="cart-container">
         <button type="button" className="cart-heading" onClick={() => setShowCart(false)}>
           <AiOutlineLeft />
-          <span className="heading">Your Cart:</span>
+          <span className="heading font-tertiary">Your Cart:</span>
           <span className="cart-num-items">{totalQuantities} items</span>
         </button>
 
         {cartItems.length < 1 && (
-          <div className="empty-cart">
+          <div className="empty-cart font-tertiary">
             <AiOutlineShopping size={150} />
             <h3>Your cart is empty.</h3>
             <Link href="/">
-              <button type="button" onClick={() => setShowCart(false)} className="btn">
+              <button type="button " onClick={() => setShowCart(false)} className="btn font-tertiary">
                 Continue Shopping
               </button>
             </Link>
