@@ -83,8 +83,8 @@ a {
   display: flex;
   justify-content: space-between;
   position: relative;
-  background-image: linear-gradient(to left, transparent 0%, #000000 25%), url("../public/assets/bg_1.jpg");
-  background-size:auto;
+  background-image: linear-gradient(to left, transparent 0%, #5e6a8e 15%,#000000 25%), url("../public/assets/bg_1.jpg");
+  background-size:cover;
   background-repeat: no-repeat;
   height:120px;
 }
@@ -201,7 +201,6 @@ span.text-red {
   line-height: 0.9; 
   width: 60%;
   margin: 180px auto;
-  border-bottom: 1px solid white;
 }
 .hero-banner-container .beats-solo{
   font-size: 20px;
