@@ -9,7 +9,7 @@ const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
 
   return (
-    <div className="navbar-container font-secondary w-full flex items-center">
+    <div className="navbar-container font-secondary">
       <p className="logo font-primary">
         <Link href="/">97 Spec.</Link>
       </p>

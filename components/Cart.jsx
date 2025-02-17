@@ -64,9 +64,10 @@ const Cart = () => {
                 <div className="flex bottom">
                   <div>
                     <p className="quantity-desc">
-                      <span className="minus" onClick={() => toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus /></span>
-                      <span className="num" onClick="">{item.quantity}</span>
+                      
                       <span className="plus" onClick={() => toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus /></span>
+                      <span className="num" onClick="">{item.quantity}</span>
+                      <span className="minus" onClick={() => toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus /></span>
                     </p>
                   </div>
                   <button type="button" className="remove-item" onClick={() => onRemove(item)}>
