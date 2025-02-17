@@ -96,9 +96,10 @@ a {
   color: #e8e8e8;
 }
 .marquee {
+  margin:auto;
   position: relative;
   height: 400px;
-  width: 100%;
+  max-width: 1400px;
   overflow-x: hidden;
 }
 
@@ -161,7 +162,9 @@ span.text-red {
   justify-content: center;
   gap: 15px;
   padding: 0px 0px 50px 0px;
+  margin: 10%;
 }
+
 .product-card{
  cursor: pointer;
   transform: scale(1, 1);
@@ -172,8 +175,7 @@ span.text-red {
   transform: scale(1.1,1.1)
 }
 .product-image{
-  height: 250px;
-  width: 250px;
+  max-width: 250px;
   border-radius: 5px;
   background-image: url("../public/assets/bg_11.jpg");
   background-size: cover;
@@ -847,7 +849,7 @@ padding: 30px 65px;
   font-size: 20px;
 }
 .track {
-  animation: marquee 10s linear infinite;
+  animation: marquee 40s linear infinite;
   width: 550%;
 }
 .success-wrapper, .cancel-wrapper{
