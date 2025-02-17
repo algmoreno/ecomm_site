@@ -520,7 +520,10 @@ padding: 30px 65px;
 
 .product-detail-image{
   margin: auto;
-  background-color: #e8e8e8;
+  /* background-color: #e8e8e8; */
+  background-image: linear-gradient(to left, #ffffffbd 100%,  transparent 100%), url("../public/assets/bg_12.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
   width: 60%;
   height: 100%;
   cursor: pointer;
@@ -557,10 +560,14 @@ padding: 30px 65px;
   align-items: center;
 }
 
+.reviews div {
+  display: flex;
+}
+
 .product-detail-desc {
-  color: white;
+  color: rgb(0, 0, 0);
   /* background-color: #5e6a8e; */
-  background-image: linear-gradient(to left,  #ffffff 10%,#000000 10%), url("../public/assets/bg_12.jpg");
+  background-image: linear-gradient(to left,  #ffffff 10%,#ffffff 10%), url("../public/assets/bg_12.jpg");
   background-size:cover;
   background-repeat: no-repeat;
   width: 40%;
@@ -617,9 +624,9 @@ padding: 30px 65px;
 .buttons .buy-now{
   width: 200px;
   padding: 10px 20px;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  border: none;
+  background-color: #000000;
+  color: rgb(244, 244, 244);
+  border: 2px solid #751400 ;
   margin-top: 40px;
   font-size: 18px;
   font-weight: 500;
@@ -641,14 +648,14 @@ padding: 30px 65px;
   cursor: pointer;
 }
 .quantity-desc .minus{
-  color: #ffffff;
+  color: #000000;
 }
 .quantity-desc .num{
   font-size: 20px;
 }
 
 .quantity-desc .plus{
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .maylike-products-wrapper{
