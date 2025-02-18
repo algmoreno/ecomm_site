@@ -42,10 +42,10 @@ const Cart = () => {
 
         {cartItems.length < 1 && (
           <div className="empty-cart font-tertiary">
-            <AiOutlineShopping size={150} />
+            <AiOutlineShopping style={{ margin: "auto"}} size={150} />
             <h3>Your cart is empty.</h3>
             <Link href="/">
-              <button type="button " onClick={() => setShowCart(false)} className="btn font-tertiary">
+              <button type="button" onClick={() => setShowCart(false)} className="btn font-tertiary">
                 Continue Shopping
               </button>
             </Link>

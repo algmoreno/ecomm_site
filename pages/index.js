@@ -8,15 +8,6 @@ const Home = ({ products, bannerData }) => {
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[1]} />
 
-      <div className="products-heading font-secondary">
-        <h2>
-          
-        </h2>
-        <p>
-     
-        </p>
-      </div>
-
       <div className="products-container font-secondary">
         {products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
