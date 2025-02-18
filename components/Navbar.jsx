@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="navbar-overlay">
         <CiMenuBurger className="navbar-menu-icon" />
       </div>
-      <div className="navbar-options">
+      <div className="navbar-options sm:hidden">
         <p>
           <Link href='/new'>New</Link>
         </p>

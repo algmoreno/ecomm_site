@@ -272,7 +272,7 @@ text-align: end;
   font-weight: 200;
 }
 .footer-banner-container{
-  padding: 100px 40px;
+  padding: 50px 0px 0px 50px;
   background-image: linear-gradient(to right, transparent 40%, #ffffffbd 50%, #ffffff 85%), url("../public/assets/bg_2.jpg");
   background-size:cover;
   background-repeat: no-repeat;
@@ -285,8 +285,8 @@ text-align: end;
   margin-top: 120px;
 }
 .banner-desc{
-  display: flex ;
-  justify-content: space-between;
+  display: flex;
+  line-height: 1.4;
 }
 .banner-desc button{
   border-radius: 15px;
@@ -308,14 +308,9 @@ text-align: end;
   margin:18px;
 }
 .footer-banner-image{
-  max-width: 600px;
-  position: absolute;
-  top: -25%;
-  left: 37%;
+  max-width: 375px;
 }
-.banner-desc .right{
-  line-height: 1.4;
-}
+
 .banner-desc .right h3{
   font-weight: 800;
   font-size: 60px;
@@ -326,6 +321,15 @@ text-align: end;
 .banner-desc .right .company-desc{
   font-size: 14px;
   font-weight: 300;
+}
+
+.left {
+  flex-direction: wrap;
+}
+
+.right {
+  margin:auto;
+  line-height: 1.4;
 }
 
 .cart-wrapper{
@@ -735,14 +739,13 @@ padding: 30px 65px;
     top: 5%;
     right: -6%;
   }
+
   .footer-banner-container{
     height: 560px;
     margin-top: 80px;
   }
   .footer-banner-image{
-    left: 30%;
-    top: 6%;
-    max-width: 350px;
+    max-width: 400px;
   }
   .banner-desc .left h3{
     font-weight: 900;
@@ -897,4 +900,11 @@ padding: 30px 65px;
   width: 300px;
   margin: auto;
 }
+}
+
+@media screen and (max-width:500px) { 
+
+  .footer-banner-image {
+    max-width: 280px;
+  }
 }
