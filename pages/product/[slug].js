@@ -17,8 +17,8 @@ const ProductDetails = ({ product, products }) => {
   }
 
   return (
-    <div className="product-detail-main font-tertiary">
-      <div className="product-detail-container">
+    <div>
+      <div className="product-detail-container font-tertiary">
         <div className="image-container-main">
           <div className="product-detail-image">
             <img src={urlFor(image && image[0])} alt="" />
