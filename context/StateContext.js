@@ -14,17 +14,18 @@ export const StateContext = ({ children }) => {
   let index;
 
   const onAdd = (product, quantity) => {
+    // check if product already in cart
     const checkProductInCart = cartItems.find((item) => item._id === product._id)
 
-    // increase price and quantity
+    // increasing price and quantity
     setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity)
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
     
     if(checkProductInCart){          
-      // updating the cartProducts object array with new cartProducts
+      // if product already in cart, increasing the quantity of that product
       const updatedCartItems = cartItems.map((cartProduct) => {
         if (cartProduct._id === product._id) return {
-          ...cartProduct,
+          ...cartProduct, // leaving the rest of the object the same
           quantity: cartProduct.quantity + quantity
         }
       })
@@ -34,6 +35,7 @@ export const StateContext = ({ children }) => {
     else {
       // if product isn't already in cart, add new cartItem object to array
       product.quantity = quantity;
+      // leaving the rest of the cartItems array the same and adding product object
       setCartItems([...cartItems, { ...product }])
     }
     toast.success(`${qty} ${product.name} added to the cart.`)

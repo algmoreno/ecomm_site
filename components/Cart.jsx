@@ -26,7 +26,7 @@ const Cart = () => {
     if(response.statusCode === 500) return;
     
     const session = await response.json();
-    console.log(session)
+
     toast.loading('Redirecting...');
     window.location.href = session.url;
   }

@@ -12,7 +12,6 @@ const ProductDetails = ({ product, products }) => {
 
   const handleBuyNow = () => {
     onAdd(product, qty);
-
     setShowCart(true)
   }
 
@@ -86,20 +85,23 @@ const ProductDetails = ({ product, products }) => {
 }
 
 export const getStaticPaths = async () => {
+  // querying current product
   const query = `*[_type == "product"] {
     slug {
       current 
     }
   }`
 
+  // fetching all product slugs
   const products = await client.fetch(query);
-
+  // restructuring product slugs
   const paths = products.map((product) => ({
     params: {
       slug: product.slug.current
     }
+    
   }))
-
+  // exporting paths 
   return {
     paths,
     fallback: 'blocking'
@@ -107,7 +109,9 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params: { slug }}) => {
+  // querying product that matches current product slug
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
+  // querying all products for track
   const productsQuery = '*[_type == "product"]'
 
   const product = await client.fetch(query);
