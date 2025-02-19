@@ -674,7 +674,8 @@ padding: 30px 65px;
 
 }
 .success, .cancel{
-  width: 1000px;
+  width: auto;
+  height: 600px;
   margin: auto;
   background-color: #ffffff;
   padding: 70px;
@@ -894,8 +895,7 @@ padding: 30px 65px;
   overflow-x: hidden;
 }
 .success-wrapper, .cancel-wrapper{
- 
-  min-height: 69vh;
+  height: 530px;
 }
 .success, .cancel {
    width: 370px;
@@ -904,6 +904,8 @@ padding: 30px 65px;
 }
 .success{
   height: 350px;
+  width: auto;
+  margin: 0;
 }
 .success h2{
   font-size: 17px;
