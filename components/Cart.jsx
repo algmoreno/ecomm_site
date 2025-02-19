@@ -36,8 +36,6 @@ const Cart = () => {
       <div className="cart-container">
         <button type="button" className="cart-heading" onClick={() => setShowCart(false)}>
           <AiOutlineLeft />
-          <span className="heading font-tertiary">Your Cart:</span>
-          <span className="cart-num-items">{totalQuantities} items</span>
         </button>
 
         {cartItems.length < 1 && (
@@ -65,9 +63,9 @@ const Cart = () => {
                   <div>
                     <p className="quantity-desc">
                       
-                      <span className="plus" onClick={() => toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus /></span>
-                      <span className="num" onClick="">{item.quantity}</span>
                       <span className="minus" onClick={() => toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus /></span>
+                      <span className="num" onClick="">{item.quantity}</span>
+                      <span className="plus" onClick={() => toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus /></span>
                     </p>
                   </div>
                   <button type="button" className="remove-item" onClick={() => onRemove(item)}>
@@ -85,7 +83,7 @@ const Cart = () => {
               <h3>Subtotal:</h3>
               <h3>${totalPrice}</h3>
             </div>
-            <div className="btn-container">
+            <div className="cart-btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>
                 Proceed to Check Out
               </button>

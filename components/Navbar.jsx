@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { AiOutlineShopping } from 'react-icons/ai'
 import { Cart } from './'
@@ -7,6 +7,23 @@ import { CiMenuBurger } from "react-icons/ci";
 
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
+  // const [isMobile, setIsMobile] = useState(false);
+
+  // useEffect(() => {
+  //   console.log("isMobile", isMobile)
+  //   const mediaQuery = window.matchMedia("(max-width: 800px)");
+  //   setIsMobile(mediaQuery.matches);
+
+  //   const handleMediaQueryChange = (event) => {
+  //     setIsMobile(event.matches)
+  //   }
+
+  //   mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+  //   return () => {
+  //     mediaQuery.removeEventListener("change", handleMediaQueryChange);
+  //   }
+  // }, []);
 
   return (
     <div className="navbar-container font-secondary">
@@ -16,7 +33,8 @@ const Navbar = () => {
       <div className="navbar-overlay">
         <CiMenuBurger className="navbar-menu-icon" />
       </div>
-      <div className="navbar-options sm:hidden">
+      
+      <div className="navbar-options">
         <p>
           <Link href='/new'>New</Link>
         </p>

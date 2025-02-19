@@ -62,8 +62,7 @@ a {
 }
 
 .navbar-menu-icon{
-  width: 25px;
-  height: 100px;
+  display: none;
 }
 
 .navbar-options {  
@@ -78,12 +77,11 @@ a {
   text-decoration-line: underline;
 }  
 
-/* */
 .navbar-container{
   display: flex;
   justify-content: space-between;
   position: relative;
-  background-image: linear-gradient(to left, transparent 0%, #5e6a8e 15%,#000000 25%), url("../public/assets/bg_1.jpg");
+  background-image: linear-gradient(to left, transparent 0%, #414141 10%,#000000 15%), url("../public/assets/bg_1.jpg");
   background-size:cover;
   background-repeat: no-repeat;
   height:120px;
@@ -334,7 +332,6 @@ text-align: end;
 
 .cart-wrapper{
   width: 100vw;
-  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   right: 0;
   top: 0;
@@ -344,14 +341,19 @@ text-align: end;
 }
 .cart-container{
   height: 100vh;
-  width: 600px;
+  max-width: 400px;
   background-color: white;
   background-size:cover;
   background-repeat: no-repeat;
   float: right;
   padding: 40px 10px;
   position: relative;
-  
+  border-left: 1px solid #dddddd;
+  box-shadow: 0px 0px 44px #5a5a5a;
+}
+
+.cart-btn-container {
+  width:auto;
 }
 
 .footer-container{
@@ -412,7 +414,7 @@ text-align: end;
 .product-container{
   margin-top: 15px;
   overflow: auto;
-  max-height: 70vh;
+  max-height: 70%;
   padding: 20px 10px;
 }
 .product{
@@ -456,6 +458,7 @@ text-align: end;
   cursor: pointer;
   background: transparent;
   border: none;
+  margin: 0px auto 0px 5%;
 }
 .cart-bottom{
   position: absolute;
@@ -820,20 +823,27 @@ padding: 30px 65px;
   }
 
   .cart-container{
-    width: 415px;
-  padding: 4px;
+    width: 100%;
+    padding: 4px;
   }
   .cart-heading{
     margin-top: 35px;
   }
+  .product {
+    display: block;
+    gap: 30px;
+    padding: 20px;
+    width: 180px;
+    height: auto;
+    margin: auto;
+}
   .product-container{
     margin-top: 10px;
-  }
-  .product{
-    padding: 20px 5px;
+    height: 60%;
 
   }
-  .product .cart-product-image{
+
+  .cart-product-image{
     width: 25%;
     height: 25%;
   }
@@ -909,4 +919,24 @@ padding: 30px 65px;
   .footer-banner-image {
     max-width: 270px;
   }
+
+  .navbar-menu-icon{
+    display: flex;
+    width: 25px;
+    height:auto;
+  }
+
+  .navbar-overlay {
+    margin: 0px auto 0px 5%;
+  }
+
+  .navbar-options {  
+    display: none !important;
+  } 
+
+  .cart-btn-container {
+    width: 200px;
+    margin:auto;
+}
+
 }
