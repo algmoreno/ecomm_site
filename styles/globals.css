@@ -201,7 +201,7 @@ span.text-red {
   background-repeat: no-repeat;
   border-radius: 10px;
   position: relative;
-  min-height: 500px;
+  max-height: 500px;
   line-height: 0.9; 
   max-width: 1000px;
   margin: 180px auto;
@@ -746,6 +746,7 @@ padding: 30px 65px;
   }
   .footer-banner-image{
     max-width: 400px;
+    margin-bottom: 5%;
   }
   .banner-desc .left h3{
     font-weight: 900;
@@ -766,7 +767,6 @@ padding: 30px 65px;
   }
   .banner-desc{
     flex-wrap: wrap;
-    gap: 20px;
   }
   .hero-banner-container{
     line-height: 1.3;
