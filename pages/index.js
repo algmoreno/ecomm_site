@@ -6,7 +6,7 @@ const Home = ({ products, bannerData }) => {
 
   return (
     <>
-      {/* <HeroBanner heroBanner={bannerData.length && bannerData[1]} /> */}
+      <HeroBanner heroBanner={bannerData.length && bannerData[1]} />
 
       <div className="products-container font-secondary">
         {products?.map((product) => <Product key={product._id} product={product} />)}
