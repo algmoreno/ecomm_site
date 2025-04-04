@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <Head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
         <title>
           97 Spec.
         </title>
