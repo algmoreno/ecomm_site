@@ -30,18 +30,6 @@ const Navbar = () => {
       <p className="logo font-primary">
         <Link href="/">97 Spec.</Link>
       </p>
-      <div className="navbar-overlay">
-        <CiMenuBurger className="navbar-menu-icon" />
-      </div>
-      
-      <div className="navbar-options">
-        <p>
-          <Link href='/new'>New</Link>
-        </p>
-        <p>
-          <Link href='/womens'>Deals</Link>
-        </p>  
-      </div>
 
       <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
         <AiOutlineShopping />
